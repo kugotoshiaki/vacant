@@ -1,15 +1,149 @@
-.container {
-  max-width: 1000px;
-  margin: auto;
+// base
+$baseFontSize: 16;
+  @function rem($pixels) {
+    @return $pixels / $baseFontSize * 1rem;
+  }
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: rem(16);
+  line-height: 1.5;
   background: #f8f8f8;
 }
 
+.header-title {
+  scroll-margin-top: 80px;
+}
+
+._img {
+  width: 100%;
+  height: auto;
+}
+
+.link {
+  color: #333;
+  transition: all .5s;
+}
+
+.link:hover {
+  box-shadow: 1px 1px 1px 1px #ddd;
+  opacity: .7;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+// header
 .header-area {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.header-contents {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  margin: auto;
   padding: 20px;
+  max-width: 1000px;
+  .nav-area {
+    justify-self: end;
+  }
   .nav-list {
     display: grid;
-    place-content: end;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    .item {
+      display: grid;
+      padding: 10px 0;
+    }
+    .link {
+      display: grid;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+}
+.header-logo {
+  width: 150px;
+}
+
+// main
+
+.main-area {
+  padding: 80px 20px;
+}
+
+.lead-text {
+  text-align: center;
+}
+
+.heading-title {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem(24);
+}
+
+.heading-title + * + * {
+  margin-top: 20px;
+}
+
+.sec {
+  margin: 100px 0 0;
+}
+
+
+.sec02 {
+  .article-list {
+    .list {
+      padding: 20px 0;
+      border-bottom: 1px solid #000;
+    }
+    .list:not(:first-child) {
+      margin-top: 30px;
+    }
+    .item {
+      display: flex;
+      gap: 30px;
+      transition: all .3s;
+      .thumb {
+        flex: 0 0 200px;
+      }
+      .blog-sec {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        .title {
+          margin-bottom: 10px;
+        }
+        .desc {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          .time {
+            margin-top: auto;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .item:hover {
+      opacity: .7;
+    }
   }
 }
