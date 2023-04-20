@@ -4,6 +4,8 @@ $baseFontSize: 16;
     @return $pixels / $baseFontSize * 1rem;
   }
 
+$baseFontColor: #333;
+
 html {
   font-family: 'Noto Sans JP', sans-serif;
   font-family: 'Roboto Slab', serif;
@@ -17,8 +19,8 @@ body {
   background: #f8f8f8;
 }
 
-.header-title {
-  scroll-margin-top: 80px;
+.heading-title {
+  scroll-margin-top: 150px;
 }
 
 ._img {
@@ -27,7 +29,7 @@ body {
 }
 
 .link {
-  color: #333;
+  color: $baseFontColor;
   transition: all .5s;
 }
 
@@ -82,6 +84,28 @@ body {
   width: 150px;
 }
 
+// footer
+
+.footer-area {
+  margin-top: 50px;
+}
+
+.logo-wrap {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.copy {
+  margin-top: 30px;
+  p {
+    font-size: rem(10);
+    text-align: center;
+  }
+}
+
 // main
 
 .main-area {
@@ -107,6 +131,38 @@ body {
   margin: 100px 0 0;
 }
 
+.contents-wrap {
+  margin-top: 50px;
+}
+
+.btn-area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+  color: $baseFontColor;
+  font-size: rem(18);
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px rgba(51, 51, 51, 1);
+}
+
+.btn01:hover {
+  box-shadow: 0 0 #333;
+  color: #fff;
+  background-color: #333;
+}
+
 
 .sec02 {
   .article-list {
@@ -123,6 +179,11 @@ body {
       transition: all .3s;
       .thumb {
         flex: 0 0 200px;
+      }
+      @media screen and (max-width:600px) {
+        .thumb {
+          flex: 0 1 auto;
+        }
       }
       .blog-sec {
         flex: 1 1 auto;
@@ -145,5 +206,44 @@ body {
     .item:hover {
       opacity: .7;
     }
+  }
+}
+
+.sec03 {
+  .hobby-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px 6%;
+    .item {
+      border: 3px solid #ddd;
+      border-radius: 15px;
+    }
+  }
+  .card {
+    color: $baseFontColor;
+    .thumb-wrap {
+      border-radius: 10px 10px 0px 0px;
+      overflow: hidden;
+      .card-thumb {
+        transition: all .3s ease-in;
+      }
+    }
+    .detaile-list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
+      &__ttl {
+        margin-top: 10px;
+        font-size: rem(18);
+      }
+      &__desc {
+        margin-inline-start: 1em;
+        text-align: left;
+      }
+    }
+  }
+  .card:hover .card-thumb {
+    scale: 1.2;
   }
 }

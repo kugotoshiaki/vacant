@@ -11,8 +11,8 @@ body {
   background: #f8f8f8;
 }
 
-.header-title {
-  scroll-margin-top: 80px;
+.heading-title {
+  scroll-margin-top: 150px;
 }
 
 ._img {
@@ -78,6 +78,26 @@ body {
   width: 150px;
 }
 
+.footer-area {
+  margin-top: 50px;
+}
+
+.logo-wrap {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100px;
+}
+
+.copy {
+  margin-top: 30px;
+}
+.copy p {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
 .main-area {
   padding: 80px 20px;
 }
@@ -101,6 +121,38 @@ body {
   margin: 100px 0 0;
 }
 
+.contents-wrap {
+  margin-top: 50px;
+}
+
+.btn-area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+  color: #333;
+  font-size: 1.125rem;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px rgb(51, 51, 51);
+}
+
+.btn01:hover {
+  box-shadow: 0 0 #333;
+  color: #fff;
+  background-color: #333;
+}
+
 .sec02 .article-list .list {
   padding: 20px 0;
   border-bottom: 1px solid #000;
@@ -115,6 +167,11 @@ body {
 }
 .sec02 .article-list .item .thumb {
   flex: 0 0 200px;
+}
+@media screen and (max-width: 600px) {
+  .sec02 .article-list .item .thumb {
+    flex: 0 1 auto;
+  }
 }
 .sec02 .article-list .item .blog-sec {
   flex: 1 1 auto;
@@ -135,4 +192,42 @@ body {
 }
 .sec02 .article-list .item:hover {
   opacity: 0.7;
+}
+
+.sec03 .hobby-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px 6%;
+}
+.sec03 .hobby-list .item {
+  border: 3px solid #ddd;
+  border-radius: 15px;
+}
+.sec03 .card {
+  color: #333;
+}
+.sec03 .card .thumb-wrap {
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+.sec03 .card .thumb-wrap .card-thumb {
+  transition: all 0.3s ease-in;
+}
+.sec03 .card .detaile-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.sec03 .card .detaile-list__ttl {
+  margin-top: 10px;
+  font-size: 1.125rem;
+}
+.sec03 .card .detaile-list__desc {
+  -webkit-margin-start: 1em;
+          margin-inline-start: 1em;
+  text-align: left;
+}
+.sec03 .card:hover .card-thumb {
+  scale: 1.2;
 }/*# sourceMappingURL=style.css.map */
