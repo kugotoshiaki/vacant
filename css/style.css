@@ -1,6 +1,9 @@
+:root {
+  --textEn: "Roboto Slab";
+}
+
 html {
   font-family: "Noto Sans JP", sans-serif;
-  font-family: "Roboto Slab", serif;
   color: #333;
   scroll-behavior: smooth;
 }
@@ -72,6 +75,8 @@ body {
   display: grid;
   align-items: center;
   padding: 20px;
+  font-family: var(--textEn);
+  text-transform: uppercase;
 }
 
 .header-logo {
@@ -107,7 +112,8 @@ body {
 }
 
 .heading-title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  font-family: var(--textEn);
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -118,7 +124,8 @@ body {
 }
 
 .sec {
-  margin: 100px 0 0;
+  margin: 50px 0 0;
+  padding: 50px 0 50px;
 }
 
 .contents-wrap {
@@ -126,7 +133,7 @@ body {
 }
 
 .btn-area {
-  margin-top: 50px;
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -170,13 +177,17 @@ body {
 }
 @media screen and (max-width: 600px) {
   .sec02 .article-list .item .thumb {
-    flex: 0 1 auto;
+    flex: 0 1 100%;
+    max-width: 200px;
+    display: grid;
+    place-content: center;
   }
 }
 .sec02 .article-list .item .blog-sec {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  color: #333;
 }
 .sec02 .article-list .item .blog-sec .title {
   margin-bottom: 10px;
@@ -185,6 +196,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.sec02 .article-list .item .blog-sec .desc .text {
+  margin-bottom: 20px;
 }
 .sec02 .article-list .item .blog-sec .desc .time {
   margin-top: auto;
@@ -211,7 +225,17 @@ body {
   overflow: hidden;
 }
 .sec03 .card .thumb-wrap .card-thumb {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.3s ease-in;
+}
+.sec03 .card .thumb-wrap .-filter_sepia {
+  filter: sepia(0.5);
+}
+.sec03 .card .thumb-wrap .-filter_cont {
+  filter: contrast(0.7);
 }
 .sec03 .card .detaile-list {
   display: flex;
@@ -220,7 +244,7 @@ body {
   text-align: center;
 }
 .sec03 .card .detaile-list__ttl {
-  margin-top: 10px;
+  margin: 10px 0 20px;
   font-size: 1.125rem;
 }
 .sec03 .card .detaile-list__desc {
