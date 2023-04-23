@@ -76,6 +76,7 @@ body {
   align-items: center;
   padding: 20px;
   font-family: var(--textEn);
+  text-align: center;
   text-transform: uppercase;
 }
 

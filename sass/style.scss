@@ -81,6 +81,7 @@ body {
       align-items: center;
       padding: 20px;
       font-family: var(--textEn);
+    text-align: center;
       text-transform: uppercase;
     }
   }
@@ -112,6 +113,29 @@ body {
 }
 
 // main
+
+// .wrap {
+//   overflow: hidden;
+//   white-space: nowrap;
+//   width: 100%;
+// }
+
+// .image {
+//   display: inline-block;
+//   margin-right: 30px;
+//   width: 150px;
+//   height: 300px;
+//   animation: slide 10s linear infinite;
+// }
+
+// @keyframes slide {
+//   from {
+//     transform: translateX(100%);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
 
 .main-area {
   padding: 80px 20px;

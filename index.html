@@ -5,9 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <title>Colective Action</title>
 </head>
@@ -34,6 +36,25 @@
         <div class="lead-text">
           <p>今やっている案件や、勉強してきたこと</p>
         </div>
+        <section class="splide" aria-labelledby="carousel-heading">
+          <h2 id="carousel-heading">Splideの基本的なHTML</h2>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async"></li>
+              <li class="splide__slide"><img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async"></li>
+              <li class="splide__slide"><img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async"></li>
+            </ul>
+          </div>
+          <button class="splide__toggle" type="button">
+            <span class="splide__toggle__play">Play</span>
+            <span class="splide__toggle__pause">Pause</span>
+          </button>
+        </section>
+        <!-- <div class="wrap">
+          <img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async">
+          <img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async">
+          <img class="image" src="/img/image-01.jpg" alt="" width="150" height="300" decoding="async">
+        </div> -->
         <div class="btn-area">
           <a href="/about/" class="btn01">詳しく見る</a>
         </div>
@@ -161,5 +182,16 @@
       <p><small>©︎colective action</small></p>
     </div>
   </footer>
+  <script>
+    new Splide( '.splide',{
+      type : 'loop',
+      fixedWidth : '10rem',
+      fixedHeight: '6rem',
+      gap        : '1rem',
+      padding: '20%',
+      autoplay: 'pause',
+      speed: number = 1000,
+    } ).mount();
+  </script>
 </body>
 </html>
