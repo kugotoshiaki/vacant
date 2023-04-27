@@ -1,2 +1,5 @@
-css/style.css
-css/style.css.map
+css/
+.prettierrc
+.gitignore
+.vscode
+*.css
