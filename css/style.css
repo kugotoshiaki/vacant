@@ -38,6 +38,9 @@ body {
   margin: auto;
 }
 
+/*
+HEADER
+=======================================*/
 .header-area {
   position: sticky;
   top: 0;
@@ -84,6 +87,9 @@ body {
   width: 150px;
 }
 
+/*
+FOOTER
+=======================================*/
 .footer-area {
   margin-top: 50px;
 }
@@ -104,6 +110,9 @@ body {
   text-align: center;
 }
 
+/*
+MAIN
+=======================================*/
 .main-area {
   padding: 80px 20px;
 }
@@ -264,6 +273,9 @@ body {
   scale: 1.2;
 }
 
+/*
+SPLIDE
+=======================================*/
 .splide {
   position: relative;
 }
@@ -347,4 +359,11 @@ body {
   width: 10px;
   height: 10px;
   background: #333;
+}
+
+/*
+JS
+=======================================*/
+.fadein {
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
