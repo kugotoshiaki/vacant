@@ -1,5 +1,7 @@
 :root {
   --textEn: "Roboto Slab";
+  --light-grey: #eee;
+  --light-green: #d5afff;
 }
 
 html {
@@ -85,6 +87,31 @@ HEADER
 
 .header-logo {
   width: 150px;
+}
+
+/*
+FOOTER
+=======================================*/
+#loading {
+  background-color: var(--light-grey);
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
+
+#loading-screen {
+  background-color: var(--light-green);
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  translate: 0 100vh;
+}
+
+#loading p {
+  font-size: 2rem;
+  font-family: var(--textEn);
 }
 
 /*

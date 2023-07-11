@@ -1,3 +1,52 @@
+const loadingGrey = document.querySelector('#loading');
+const loadingPink = document.querySelector('#loading-screen');
+const loadingText = document.querySelector('#loading p');
+
+window.addEventListener('load', () => {
+  loadingGrey.animate(
+    {
+      opacity: [1, 0],
+      visibilty: 'hidden',
+    },
+    {
+      duration: 2000,
+      delay: 1200,
+      easing: 'ease-in',
+      fill: 'forwards',
+    }
+  );
+
+  loadingPink.animate(
+    {
+      translate: ['0 100vh', '0 0', '0 -100vh'],
+    },
+    {
+      duration: 2000,
+      delay: 800,
+      easing: 'ease',
+      fill: 'forwards',
+    }
+  );
+
+  loadingText.animate(
+    [
+      {
+        opacity: 1,
+        offset: 0.8,
+      },
+      {
+        opacity: 0,
+        offset: 1,
+      },
+    ],
+    {
+      duration: 1200,
+      easing: 'ease',
+      fill: 'forwards',
+    }
+  );
+});
+
 const fadeIn = (entries, obs) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
