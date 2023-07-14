@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   loadingGrey.animate(
     {
       opacity: [1, 0],
-      visibilty: 'hidden',
+      visibility: 'hidden',
     },
     {
       duration: 2000,
