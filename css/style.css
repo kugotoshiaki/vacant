@@ -1,11 +1,11 @@
 :root {
-  --textEn: "Roboto Slab";
+  --textEn: 'Roboto Slab';
   --light-grey: #eee;
   --light-green: #d5afff;
 }
 
 html {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: #333;
   scroll-behavior: smooth;
 }
@@ -54,7 +54,7 @@ HEADER
   display: grid;
   grid-template-columns: auto 1fr;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin: auto;
   padding: 20px;
   max-width: 1000px;
@@ -67,7 +67,7 @@ HEADER
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   width: 100%;
   max-width: 400px;
   height: 100%;
@@ -272,7 +272,7 @@ MAIN
   width: 100%;
   height: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.3s ease-in;
 }
 .sec03 .card .thumb-wrap .-filter_sepia {
@@ -293,7 +293,7 @@ MAIN
 }
 .sec03 .card .detaile-list__desc {
   -webkit-margin-start: 1em;
-          margin-inline-start: 1em;
+  margin-inline-start: 1em;
   text-align: left;
 }
 .sec03 .card:hover .card-thumb {
@@ -330,7 +330,7 @@ SPLIDE
 
 .splide__track::before,
 .splide__track::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 80px;
@@ -363,7 +363,7 @@ SPLIDE
   text-align: center;
 }
 .splide__toggle .splide__toggle__play::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 35%;
   right: 15px;
@@ -379,7 +379,7 @@ SPLIDE
   text-align: center;
 }
 .splide__toggle .splide__toggle__pause::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 35%;
   right: 15px;
@@ -393,4 +393,20 @@ JS
 =======================================*/
 .fadein {
   opacity: 0;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
+
+/*
+スクロールで擬似要素を動かす
+=======================================*/
+.scroll {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.scroll::before {
+  background: #ed8;
+  position: absolute;
+  content: '';
+  display: block;
+  inset: 0;
+}

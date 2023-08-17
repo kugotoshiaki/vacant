@@ -1,9 +1,5 @@
 // base
 $baseFontSize: 16;
-@function rem($pixels) {
-  @return $pixels / $baseFontSize * 1rem;
-}
-
 $baseFontColor: #333;
 
 :root {
@@ -16,6 +12,11 @@ html {
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
   scroll-behavior: smooth;
+  font-size: $baseFontSize + px;
+}
+
+@function rem($pixels, $context: $baseFontSize) {
+  @return $pixels / $context * 1rem;
 }
 
 body {
@@ -431,4 +432,20 @@ JS
 =======================================*/
 .fadein {
   opacity: 0;
+}
+
+/*
+スクロールで擬似要素を動かす
+=======================================*/
+.scroll {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.scroll::before {
+  background: #ed8;
+  position: absolute;
+  content: '';
+  display: block;
+  inset: 0;
 }
