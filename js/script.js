@@ -104,3 +104,37 @@ const scrollElements = document.querySelectorAll('.scroll');
 scrollElements.forEach((scrollElement) => {
   scrollObserver.observe(scrollElement);
 });
+
+// スクロールするとアドレスバー（仮）が出る
+let prevScrollTop = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+  let currentScrollPos = window.pageYOffset;
+  let addressBar = document.querySelector('.shop-area');
+  if (currentScrollPos > prevScrollTop) {
+    addressBar.animate(
+      {
+        height: 150 + 'px',
+      },
+      {
+        duration: 1000,
+        delay: 100,
+        easing: 'ease-in',
+        fill: 'forwards',
+      }
+    );
+  } else {
+    addressBar.animate(
+      {
+        height: 70 + 'px',
+      },
+      {
+        duration: 1000,
+        delay: 100,
+        easing: 'ease-in',
+        fill: 'forwards',
+      }
+    );
+  }
+  prevScrollTop = currentScrollPos;
+});
