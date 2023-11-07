@@ -138,3 +138,27 @@ window.addEventListener('scroll', () => {
   }
   prevScrollTop = currentScrollPos;
 });
+
+// タイマー
+
+function displayTime() {
+  const now = new Date();
+  // const hour = now.getHours();
+  // const minute = now.getMinutes();
+  // const second = now.getSeconds();
+
+  const padZero = (value) => {
+    return value.toString().padStart(2, '0');
+  };
+
+  const hour = padZero(now.getHours());
+  const minute = padZero(now.getMinutes());
+  const second = padZero(now.getSeconds());
+
+  const currentTime = `${hour}:${minute}:${second}`;
+
+  document.querySelector('.timer').textContent = currentTime;
+}
+
+displayTime();
+setInterval(displayTime, 1000);

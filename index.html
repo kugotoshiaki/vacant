@@ -36,11 +36,15 @@
     </header>
     <div class="container">
       <main class="main-area">
-        <div class="lead-text">
-          <p><a href="./about/">今までやってきたこと</a></p>
+        <button popovertarget="test1" class="timer">timer</button>
+        <div class="timer-code" id="test1" popover>
+          <h2>testcode</h2>
+          <p>
+            function displayTime() { const now = new Date(); // const hour = now.getHours(); // const minute = now.getMinutes(); // const second = now.getSeconds(); const padZero = (value) => { return
+            value.toString().padStart(2, '0'); }; const hour = padZero(now.getHours()); const minute = padZero(now.getMinutes()); const second = padZero(now.getSeconds()); const currentTime =
+            `${hour}:${minute}:${second}`; document.querySelector('.timer').textContent = currentTime; } displayTime(); setInterval(displayTime, 1000);
+          </p>
         </div>
-        <button popovertarget="test1">open</button>
-        <div class="aaa" id="test1" popover>test</div>
         <section class="sec sec01">
           <h2 class="heading-title" id="about">about</h2>
           <div class="lead-text">
@@ -191,11 +195,42 @@
                   </div>
                   <dl class="detaile-list">
                     <dt class="detaile-list__ttl">ラジオ</dt>
-                    <dd class="detaile-list__desc">心のバイブル</dd>
+                    <dd class="detaile-list__desc">おもしろい</dd>
+                  </dl>
+                </a>
+              </li>
+              <li class="item">
+                <a href="./about/" class="card">
+                  <div class="thumb-wrap">
+                    <img src="/public/img/image-08.jpg" alt="" class="_img card-thumb -filter_sepia" width="200" height="200" decoding="async" />
+                  </div>
+                  <dl class="detaile-list">
+                    <dt class="detaile-list__ttl">jsTips</dt>
+                    <dd class="detaile-list__desc">仕事用</dd>
                   </dl>
                 </a>
               </li>
             </ul>
+            <!-- <ul class="magnet-hover">
+              <li class="magnet-list">
+                <article>
+                  <h3>heading</h3>
+                  <p>text</p>
+                </article>
+              </li>
+              <li class="magnet-list">
+                <article>
+                  <h3>heading</h3>
+                  <p>text</p>
+                </article>
+              </li>
+              <li class="magnet-list">
+                <article>
+                  <h3>heading</h3>
+                  <p>text</p>
+                </article>
+              </li>
+            </ul> -->
           </div>
         </section>
       </main>
