@@ -331,6 +331,70 @@ MAIN
 }
 
 /*
+Accordion
+=======================================*/
+.accordion {
+  width: 400px;
+  max-width: 90%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #a3a3a3;
+}
+
+.accordion > * + * {
+  border-top: 1px solid #a3a3a3;
+}
+
+.accordion-header {
+  position: relative;
+}
+
+.accordion-trigger {
+  display: block;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.5rem;
+  font-size: 1.25rem;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accordion-trigger.__open {
+  background-color: #dbeafe;
+}
+
+@media (hover: hover) {
+  .accordion-trigger:hover {
+    background-color: #dbeafe;
+  }
+}
+.accordion-icon {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border: solid #000;
+  border-width: 2px 2px 0 0;
+  transform: rotate(135deg);
+}
+
+.accordion-trigger[aria-expanded=true] .accordion-icon {
+  transform: rotate(-45deg);
+}
+
+.accordion-panel.__close {
+  display: none;
+}
+
+.accordion-panel__text {
+  padding: 1rem 1.5rem;
+}
+
+/*
 SPLIDE
 =======================================*/
 .splide {

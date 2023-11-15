@@ -139,6 +139,40 @@ window.addEventListener('scroll', () => {
   prevScrollTop = currentScrollPos;
 });
 
+// Accordion
+const triggers = document.querySelectorAll('.accordion-trigger');
+triggers.forEach((trigger) => {
+  const controls = trigger.getAttribute('aria-controls');
+  const panel = document.getElementById(controls);
+
+  trigger.addEventListener('click', (e) => {
+    const target = e.currentTarget;
+    const isOpen = target.getAttribute('aria-expanded') === 'true';
+    // let height = target.querySelector('.accordion-panel');
+
+    if (isOpen) {
+      // アコーディオンを閉じる
+      target.setAttribute('aria-expanded', 'false');
+      panel.classList.add('__close');
+    } else {
+      // アコーディオンを開く
+      target.setAttribute('aria-expanded', 'true');
+      panel.classList.remove('__close');
+      // height.animate(
+      //   {
+      //     height: 70 + 'px',
+      //   },
+      //   {
+      //     duration: 1000,
+      //     delay: 0,
+      //     easing: 'ease-in',
+      //     fill: 'forwards',
+      //   }
+      // );
+    }
+  });
+});
+
 // タイマー
 
 function displayTime() {

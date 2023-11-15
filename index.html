@@ -45,6 +45,30 @@
             `${hour}:${minute}:${second}`; document.querySelector('.timer').textContent = currentTime; } displayTime(); setInterval(displayTime, 1000);
           </p>
         </div>
+
+        <!-- Accordion start -->
+        <div class="accordion">
+          <h2 class="accordion-header">
+            <button class="accordion-trigger" aria-controls="accordion-panel-1" aria-expanded="false">見出し01<span class="accordion-icon"></span></button>
+          </h2>
+          <div id="accordion-panel-1" class="accordion-panel __close">
+            <p class="accordion-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+          <h2 class="accordion-header">
+            <button class="accordion-trigger" aria-controls="accordion-panel-2" aria-expanded="false">見出し02<span class="accordion-icon"></span></button>
+          </h2>
+          <div id="accordion-panel-2" class="accordion-panel __close">
+            <p class="accordion-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+          <h2 class="accordion-header">
+            <button class="accordion-trigger" aria-controls="accordion-panel-3" aria-expanded="false">見出し03<span class="accordion-icon"></span></button>
+          </h2>
+          <div id="accordion-panel-3" class="accordion-panel __close">
+            <p class="accordion-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+        </div>
+        <!-- Accordion end -->
+
         <section class="sec sec01">
           <h2 class="heading-title" id="about">about</h2>
           <div class="lead-text">
