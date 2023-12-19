@@ -3,3 +3,4 @@ css/
 .gitignore
 .vscode
 *.css
+node_modules
