@@ -5,7 +5,13 @@ $baseFontColor: #333;
 :root {
   --textEn: 'Roboto Slab';
   --light-grey: #eee;
-  --light-green: #d5afff;
+  --light-green: #d5edeb;
+  --green: #63dbd0;
+  --brown: #403632;
+}
+
+:focus {
+  outline: 1px solid #333;
 }
 
 html {
@@ -79,39 +85,66 @@ HEADER
   @media (max-width: 640px) {
     grid-template-columns: 100px auto;
   }
-  .nav-area {
-    justify-self: end;
-  }
-  .nav-list {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    column-gap: 20px;
-    @media (max-width: 640px) {
-      column-gap: 10px;
-    }
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    .item {
-      display: grid;
-      padding: 10px 0;
-    }
-    .link {
-      display: grid;
-      align-items: center;
-      padding: 20px;
-      @media (max-width: 640px) {
-        padding: 5px;
-      }
-      font-family: var(--textEn);
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
 }
 .header-logo {
   width: 150px;
+}
+
+/*
+SLIDE MENU
+================================================ */
+.nav-wrap {
+  justify-self: end;
+}
+.btn-menu {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--brown);
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  transition: 0.4s;
+}
+.btn-menu svg {
+  fill: var(--brown);
+  margin-top: 0.25rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* 閉じるボタン */
+#menu-close {
+  border: 1px solid var(--light-green);
+}
+#menu-close svg {
+  fill: var(--light-green);
+}
+
+/* スライドメニューパネル */
+#menu-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 8rem 2rem 2rem;
+  width: max(32vw, 20rem);
+  height: 100vh;
+  background-color: var(--brown);
+  box-shadow: 0 0 2rem var(--brown);
+  font-family: var(--oswald-font);
+  translate: 100vw;
+  visibility: hidden;
+}
+.menu-list {
+  list-style: none;
+}
+.menu-list li {
+  margin: 1.5rem 0;
+  opacity: 0;
+}
+.menu-list a {
+  color: var(--light-green);
+  text-decoration: none;
+  font-size: 2rem;
 }
 
 /*
@@ -539,11 +572,11 @@ JS
   .shop-area {
     display: block;
     position: fixed;
-    bottom: 5px;
+    bottom: 0px;
     width: 100%;
     height: 70px;
     background-color: #fff;
-    z-index: 9999;
+    z-index: 999;
     p {
       display: grid;
       place-content: center;
