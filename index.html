@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/logo.svg" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/script.js" defer></script>
     <title>Colective Action</title>
   </head>
   <body>
     <!-- ローディング画面 -->
     <div id="loading">
-      <p>Loading...</p>
+      <p>
+        <span class="txt01">L</span><span class="txt02">o</span><span class="txt03">a</span><span class="txt04">d</span><span class="txt05">i</span><span class="txt06">n</span
+        ><span class="txt07">g</span><span class="txt08">...</span>
+      </p>
       <div id="loading-screen"></div>
     </div>
     <header class="header-area">
@@ -27,7 +29,7 @@
         </h1>
         <div class="nav-wrap">
           <button type="button" id="menu-open" class="btn-menu">
-            <svg role="img" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" height="24" viewBox="0 0 24 24" width="24">
               <title>メニューを開く</title>
               <path
                 clip-rule="evenodd"
@@ -38,7 +40,7 @@
           </button>
           <nav id="menu-panel" aria-hidden="true">
             <button type="button" id="menu-close" class="btn-menu">
-              <svg role="img" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <svg role="img" height="24" viewBox="0 0 24 24" width="24">
                 <title>メニューを閉じる</title>
                 <path
                   clip-rule="evenodd"
@@ -48,8 +50,8 @@
               </svg>
             </button>
             <ul class="menu-list">
-              <li><a href="#about">about</a></li>
-              <li><a href="#blog">blog</a></li>
+              <li><a href="#about">blog</a></li>
+              <li><a href="#blog">about</a></li>
               <li><a href="#hobby">hobby</a></li>
               <li><a href="mailto:hello@example.com">Contact</a></li>
             </ul>
@@ -64,7 +66,7 @@
           <h2>testcode</h2>
           <p>
             <code>
-              function displayTime() { const now = new Date(); // const hour = now.getHours(); // const minute = now.getMinutes(); // const second = now.getSeconds(); const padZero = (value) => {
+              function displayTime() { const now = new Date(); // const hour = now.getHours(); // const minute = now.getMinutes(); // const second = now.getSeconds(); const padZero = (value) =&gt; {
               return value.toString().padStart(2, '0'); }; const hour = padZero(now.getHours()); const minute = padZero(now.getMinutes()); const second = padZero(now.getSeconds()); const currentTime =
               `${hour}:${minute}:${second}`; document.querySelector('.timer').textContent = currentTime; } displayTime(); setInterval(displayTime, 1000);
             </code>
@@ -72,7 +74,7 @@
         </div>
 
         <!-- Accordion start -->
-        <div class="accordion">
+        <!-- <div class="accordion">
           <h2 class="accordion-header">
             <button class="accordion-trigger" aria-controls="accordion-panel-1" aria-expanded="false">見出し01<span class="accordion-icon"></span></button>
           </h2>
@@ -91,122 +93,46 @@
           <div id="accordion-panel-3" class="accordion-panel __close">
             <p class="accordion-panel__text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
           </div>
-        </div>
+        </div> -->
         <!-- Accordion end -->
 
-        <section class="sec sec01">
-          <h2 class="heading-title" id="about">about</h2>
-          <div class="lead-text">
-            <p class="scroll">今やっている案件や、勉強してきたこと</p>
-          </div>
-          <section class="splide" aria-labelledby="carousel-heading">
-            <h2 id="carousel-heading" class="carousel-heading">読んできた本たち</h2>
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <img class="image" src="/public/img/image-01.jpg" alt="" width="150" height="300" decoding="async" />
-                </li>
-                <li class="splide__slide">
-                  <img class="image" src="/public/img/image-01.jpg" alt="" width="150" height="300" decoding="async" />
-                </li>
-                <li class="splide__slide">
-                  <img class="image" src="/public/img/image-01.jpg" alt="" width="150" height="300" decoding="async" />
-                </li>
-              </ul>
-            </div>
-            <button class="splide__toggle" type="button">
-              <span class="splide__toggle__play">Play</span>
-              <span class="splide__toggle__pause">Pause</span>
-            </button>
-          </section>
-          <div class="btn-area">
-            <a href="/about/" class="btn01">詳しく見る</a>
-          </div>
-        </section>
         <section class="sec sec02">
           <h2 class="heading-title" id="blog">blog</h2>
           <div class="lead-text">
             <p class="scroll">備忘録やアウトプット</p>
           </div>
-          <ul class="article-list">
-            <li class="list fadein">
-              <a href="" class="item">
-                <figure class="thumb">
-                  <img src="/public/img/image-01.jpg" alt="" class="_img" width="200" height="200" decoding="async" />
+          <ul class="card-list">
+            <li class="tile">
+              <a href="#" class="tile-wrap">
+                <figure class="tile-thumb">
+                  <img src="img/note.svg" alt="" width="200" height="50" decoding="async" />
                 </figure>
-                <dl class="blog-sec">
-                  <dt class="title">aaaaa</dt>
-                  <dd class="desc">
-                    <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p class="time">
-                      <time datetime="2023-04-11">2023/04/11</time>
-                    </p>
-                  </dd>
-                </dl>
+                <header class="tile-body">
+                  <h3>note</h3>
+                  <p>英語の勉強</p>
+                </header>
               </a>
             </li>
-            <li class="list fadein">
-              <a href="" class="item">
-                <figure class="thumb">
-                  <img src="/public/img/image-01.jpg" alt="" class="_img" width="200" height="200" decoding="async" />
+            <li class="tile">
+              <a href="#" class="tile-wrap">
+                <figure class="tile-thumb">
+                  <img src="img/qiita.png" alt="" width="200" height="50" decoding="async" />
                 </figure>
-                <dl class="blog-sec">
-                  <dt class="title">aaaaa</dt>
-                  <dd class="desc">
-                    <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p class="time">
-                      <time datetime="2023-04-11">2023/04/11</time>
-                    </p>
-                  </dd>
-                </dl>
+                <header class="tile-body">
+                  <h3>Qiita</h3>
+                  <p>フロント関連</p>
+                </header>
               </a>
             </li>
-            <li class="list fadein">
-              <a href="" class="item">
-                <figure class="thumb">
-                  <img src="/public/img/image-01.jpg" alt="" class="_img" width="200" height="200" decoding="async" />
+            <li class="tile">
+              <a href="#" class="tile-wrap">
+                <figure class="tile-thumb">
+                  <img src="img/zenn.png" alt="" width="200" height="50" decoding="async" />
                 </figure>
-                <dl class="blog-sec">
-                  <dt class="title">aaaaa</dt>
-                  <dd class="desc">
-                    <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p class="time">
-                      <time datetime="2023-04-11">2023/04/11</time>
-                    </p>
-                  </dd>
-                </dl>
-              </a>
-            </li>
-            <li class="list fadein">
-              <a href="" class="item">
-                <figure class="thumb">
-                  <img src="/public/img/image-01.jpg" alt="" class="_img" width="200" height="200" decoding="async" />
-                </figure>
-                <dl class="blog-sec">
-                  <dt class="title">aaaaa</dt>
-                  <dd class="desc">
-                    <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p class="time">
-                      <time datetime="2023-04-11">2023/04/11</time>
-                    </p>
-                  </dd>
-                </dl>
-              </a>
-            </li>
-            <li class="list">
-              <a href="" class="item">
-                <figure class="thumb">
-                  <img src="/public/img/image-01.jpg" alt="" class="_img" width="200" height="200" decoding="async" />
-                </figure>
-                <dl class="blog-sec">
-                  <dt class="title">aaaaa</dt>
-                  <dd class="desc">
-                    <p class="text">テキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p class="time">
-                      <time datetime="2023-04-11">2023/04/11</time>
-                    </p>
-                  </dd>
-                </dl>
+                <header class="tile-body">
+                  <h3>zenn</h3>
+                  <p>SQLとか</p>
+                </header>
               </a>
             </li>
           </ul>
@@ -266,20 +192,34 @@
       <div class="logo-wrap">
         <a href="#"><img src="/public/img/logo.svg" alt="Colective Action" width="200" height="80" decoding="async" class="footer-logo" /></a>
       </div>
+      <form action="./" method="post" class="form">
+        <div class="form-floating mb">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="col3">
+          <input type="radio" id="radiotype01" name="radio" class="visually-hidden" /><label for="radiotype01" class="box">choice01</label
+          ><input type="radio" id="radiotype02" name="radio" class="visually-hidden" /><label for="radiotype02" class="box">choice02</label
+          ><input type="radio" id="radiotype03" name="radio" class="visually-hidden" /><label for="radiotype03" class="box">choice03</label>
+        </div>
+
+        <div class="col3">
+          <input type="checkbox" id="checktype01" name="check" class="visually-hidden" />
+          <label for="checktype01" class="check"> choice01 </label>
+          <input type="checkbox" id="checktype02" name="check" class="visually-hidden" />
+          <label for="checktype02" class="check"> choice02 </label>
+          <input type="checkbox" id="checktype03" name="check" class="visually-hidden" />
+          <label for="checktype03" class="check"> choice03 </label>
+        </div>
+      </form>
       <div class="copy">
         <p><small>©︎colective action</small></p>
       </div>
     </footer>
-    <script>
-      new Splide('.splide', {
-        type: 'loop',
-        fixedWidth: '10rem',
-        fixedHeight: '6rem',
-        gap: '1rem',
-        padding: '20%',
-        autoplay: 'pause',
-        speed: (number = 1000),
-      }).mount();
-    </script>
   </body>
 </html>

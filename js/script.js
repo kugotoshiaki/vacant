@@ -202,7 +202,7 @@ const menuClose = document.querySelector('#menu-close');
 const menuPanel = document.querySelector('#menu-panel');
 const menuItems = document.querySelectorAll('.menu-list li');
 const menuOptions = {
-  duration: 1400,
+  duration: 800,
   easing: 'ease',
   fill: 'forwards',
 };
@@ -226,8 +226,8 @@ menuOpen.addEventListener('click', () => {
         translate: ['2rem', 0],
       },
       {
-        duration: 2400,
-        delay: index * 300,
+        duration: 2000,
+        delay: index * 200,
         easing: 'ease',
         fill: 'forwards',
       }
