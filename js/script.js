@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
       visibility: 'hidden',
     },
     {
-      duration: 2000,
+      duration: 3000,
       delay: 1200,
       easing: 'ease-in',
       fill: 'forwards',
@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
       translate: ['0 100vh', '0 0', '0 -100vh'],
     },
     {
-      duration: 2000,
+      duration: 3000,
       delay: 800,
       easing: 'ease',
       fill: 'forwards',
@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
       },
     ],
     {
-      duration: 1200,
+      duration: 2000,
       easing: 'ease',
       fill: 'forwards',
     }

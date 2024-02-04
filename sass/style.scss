@@ -144,8 +144,8 @@ SLIDE MENU
   padding: 8rem 2rem 2rem;
   width: max(32vw, 20rem);
   height: 100vh;
-  background-color: var(--brown);
-  box-shadow: 0 0 2rem var(--brown);
+  background-image: linear-gradient(90deg, rgba(248, 248, 248, 1) 7%, rgba(177, 177, 177, 1) 23%, rgba(121, 118, 118, 1) 67%, rgba(60, 60, 60, 1) 99%);
+  box-shadow: 0 0 5rem #aaa;
   translate: 100vw;
   visibility: hidden;
 }
@@ -157,7 +157,7 @@ SLIDE MENU
   opacity: 0;
 }
 .menu-list a {
-  color: var(--light-green);
+  color: slategrey;
   text-decoration: none;
   font-size: 2rem;
 }
@@ -181,10 +181,48 @@ Loading
   translate: 0 100vh;
 }
 #loading p {
-  font-size: 2rem;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-shadow: 0 50px 0 #6c99c6;
+  font-size: 3rem;
   font-family: var(--textEn);
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scaleX(0);
+    transition-duration: 600ms;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  &:hover {
+    &::before {
+      background: #6c99c6;
+      transform: scaleX(1);
+    }
+
+    .txt {
+      transform: translateY(-50px);
+
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 30ms;
+        }
+      }
+    }
+  }
 }
 
+.txt {
+  display: inline-block;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 /*
 FOOTER
 =======================================*/
